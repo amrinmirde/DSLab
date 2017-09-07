@@ -54,6 +54,25 @@ void pop(){
 			take input in choice variable
 			switch(choice){
 				case 1:
-				//call peek function
+				e=peek();//call peek function
+                       printf("Enter at the top of the stack\n");
 				break;
-				case	
+				case	2:printf("Enter the element to be inserted\n");
+                                 scanf("%d",&e);
+                                 push(e);//call push function
+                               break;
+                               case 3:
+                                pop();//call pop function
+                                 break;
+                               case 4:
+                                 exit(0);//call exit(0) function
+                                 break;
+                                default:
+                                printf("Invalid option");
+                                 break;
+                       }
+                  }while(1);
+                  return 0;
+       }              
+
+
