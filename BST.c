@@ -22,31 +22,24 @@ void insert(node**r,int num)
 	temp=*r;
 	
 	if(temp==NULL)
-	*r=ptr;
+	{
+	ptr=(node*)malloc(sizeof(node));
+			ptr->data=num;
+			ptr->left=NULL;
+			ptr->right=NULL;
+			*r=ptr;
+		}
 	else
 	{
 		if(num>temp->data)
 		{
-			if(temp->right==NULL)
-			{
-			ptr=(node*)malloc(sizeof(node));
-			ptr->data=num;
-			ptr->left=NULL;
-			ptr->right=NULL:
-			temp->right=ptr;
-			return;
+			insert(&temp->right,num); 
+			
 		}
 				else
 				{
-				temp=temp->right;
-				insert(&temp,num);
-			}
-		}
-			if(temp->left!=NULL)
-			{
-			temp=temp->left;
-			insert(&temp,num);
-		}
+					insert(&temp->left,num);
+				}
 	}
 }
 int search_bst(node*q)
@@ -70,36 +63,97 @@ int search_bst(node*q)
 		}
 	}
 }
-			
+void search_node(node**x,node*root,node**parent,node**xsucc,int num,int*f)
+{
+	node*temp;
+	temp=root;
+	if(temp==NULL)
+	return;
+	if(temp->data==num)
+	{
+	*f=1;
+    *x=temp;
+	return;	
+
+	}
+	*parent=temp;
+	while(temp!=NULL)
+	{
+if(temp->data==num)
+	{
+	*f=1;
+    *x=temp;
+	return;	
+		if(num>temp->data)
+		temp=temp->right;
+		else
+		temp=temp->left;
+	}
+}
+	
+				
 
 void delete(node**q,int num)
 {
-	node*temp;
-	temp=*q;
-	if(temp==NULL)
+	node*temp,*parent,*xsucc,*x;
+	int f=0;
+	parent=NULL;
+	x=NULL;
+	temp=*r;
+	search_bst(&x,temp,&parent,&xsucc,num,&f);
+	if(f==0)
 	{
-		printf("\nThe given no. is not found");
+		printf("\nThe given element %d  is not found",num);
 		return;
 	}
-	else
-	{
-		if(temp->data==num)
+	//x has no child;
+		if(x->left==NULL && x->right==NULL)
 		{
-			if(temp->left==NULL&&temp->right==NULL)
-			free(temp);
-			
+			if(x->data>parent->data)
+			parent->right=NULL;	
 	else
 	{
-			if(num>q->data)
-			{
-				delete(q->right,num);
-			}
+		parent->left=x->left;
+		free(x);
+		//x has left child
+		else
+		if(x->left!=NULL && x->right==NULL)
+		{
+			if(x->data>parent->data)
+			parent->right=x->left;
 			else
-			{
-			           delete(q->left,num);
-			}
+			parent->left=x->left;
+			free(x);
 		}
-	}
+		//x has right child
+		else
+		if(x->right!=NULL && x->left==NULL)
+		{
+			if(x->data>parent->data)
+			parent->right=x->right;
+			else
+			parent->left=x->right;
+			free(x);
+		}
+		//x has both left and right child
+		else
+		if(x->left!=NULL && x->right!=NULL)
+		{
+			parent=x;
+			xsucc=x->right;
+			while(xsucc->left!=NULL)
+			{
+				parent=xsucc;
+				xsucc=xsucc->left;
+			}
+			if(xsucc->data>parent->data)
+			parent->right=NULL;
+			else
+			parent->left=NULL;
+			x->data=succ->data;
+			x=xsucc;
+		}
+			free(x);
 }
 
 int main()

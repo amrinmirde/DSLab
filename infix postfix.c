@@ -92,10 +92,10 @@ return data;
 } 
 int main()
 {
-char INFIX[30],POSTFIX[30];
+char infix[30],postfix[30];
 printf("\n ENTER INFIX EXPRESSION\n");
 scanf("%s",INFIX);
 convert(INFIX,POSTFIX);
-printf("POSTFIX EXPRESSION\n%s"POSTFIX);
+printf("\nPOSTFIX EXPRESSION =%s",infix);
 return 0;
 }
