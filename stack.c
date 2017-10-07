@@ -1,19 +1,19 @@
 /*IMPLEMENTATION OF STACK AS AN ARRAY
 LEARNER:Amrin Mirde..SE-16co05
-Date of performance:            *\
+Date of performance:            */
 
 #include<stdio.h>
 
 #define MAX_SIZE 10
 
-int queue[MAX_SIZE],front=-1,top=-1;
+int stack[MAX_SIZE],front=-1,top=-1;
 
 int isFull()
 {
 	
 	int isFull(){
 	//returns 1 if stack is full else returns -1
-	if(rear==MAX_SIZE-1)
+	if(top==MAX_SIZE-1)
 	return 1;
 	else return 0;
 	
