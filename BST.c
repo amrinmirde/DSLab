@@ -155,7 +155,64 @@ void delete(node**q,int num)
 		}
 			free(x);
 }
-
+void main() {
+   int choice;
+   char ans = 'N';
+   int key;
+   node *new_node, *root, *tmp, *parent;
+   node *get_node();
+   root = NULL;
+   clrscr();
+ 
+   printf("\nProgram For Binary Search Tree ");
+   do {
+      printf("\n1.Create");
+      printf("\n2.Search");
+      printf("\n3.Recursive Traversals");
+      printf("\n4.Exit");
+      printf("\nEnter your choice :");
+      scanf("%d", &choice);
+ 
+      switch (choice) {
+      case 1:
+         do {
+            new_node = get_node();
+            printf("\nEnter The Element ");
+            scanf("%d", &new_node->data);
+ 
+            if (root == NULL) /* Tree is not Created */
+               root = new_node;
+            else
+               insert(root, new_node);
+ 
+            printf("\nWant To enter More Elements?(y/n)");
+            ans = getch();
+         } while (ans == 'y');
+         break;
+ 
+      case 2:
+         printf("\nEnter Element to be searched :");
+         scanf("%d", &key);
+ 
+         tmp = search(root, key, &parent);
+         printf("\nParent of node %d is %d", tmp->data, parent->data);
+         break;
+ 
+      case 3:
+         if (root == NULL)
+            printf("Tree Is Not Created");
+         else {
+            printf("\nThe Inorder display : ");
+            inorder(root);
+            printf("\nThe Preorder display : ");
+            preorder(root);
+            printf("\nThe Postorder display : ");
+            postorder(root);
+         }
+         break;
+      }
+   } while (choice != 4);
+}
 int main()
 {
 	
