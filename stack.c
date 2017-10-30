@@ -99,7 +99,10 @@ printf("Element cannot be deleted.Stack underflow");		//msg stack underflow
 
 /*...struct feedback
 {
-char Url[30],Username[30],Passw[20],Sugg[100];
+char Url[30];
+char Username[30];
+char Passw[20];
+char Sugg[100];
 };
 void q1()                   //call q1 function....Question 1
 {
