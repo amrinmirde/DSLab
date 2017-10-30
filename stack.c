@@ -97,110 +97,51 @@ printf("Element cannot be deleted.Stack underflow");		//msg stack underflow
 }
               
 
-/*...OUTPUT OF THE PROGRAM...
-ENTER
-1.Peek
-2.Push
-3.Pop
-4.Exit
-Enter your choice2
-Enter the element to be inserted
-10
-Your element 10 is successfully inserted
-ENTER
-1.Peek
-2.Push
-3.Pop
-4.Exit
-Enter your choice2
-Enter the element to be inserted
-20
-Your element 20 is successfully inserted
-ENTER
-1.Peek
-2.Push
-3.Pop
-4.Exit
-Enter your choice2
-Enter the element to be inserted
-30
-Your element 30 is successfully inserted
-ENTER
-1.Peek
-2.Push
-3.Pop
-4.Exit
-Enter your choice2
-Enter the element to be inserted
-40
-Your element 40 is successfully inserted
-ENTER
-1.Peek
-2.Push
-3.Pop
-4.Exit
-Enter your choice2
-Enter the element to be inserted
-50
-Your element 50 is successfully inserted
-ENTER
-1.Peek
-2.Push
-3.Pop
-4.Exit
-Enter your choice3
-Your element 50 is successfully deleted
-ENTER
-1.Peek
-2.Push
-3.Pop
-4.Exit
-Enter your choice3
-Your element 40 is successfully deleted
-ENTER
-1.Peek
-2.Push
-3.Pop
-4.Exit
-Enter your choice2
-Enter the element to be inserted
-25
-Your element 25 is successfully inserted
-ENTER
-1.Peek
-2.Push
-3.Pop
-4.Exit
-Enter your choice2
-Enter the element to be inserted
-45
-Your element 45 is successfully inserted
-ENTER
-1.Peek
-2.Push
-3.Pop
-4.Exit
-Enter your choice1
-Enter at the top of the stack is 45
-ENTER
-1.Peek
-2.Push
-3.Pop
-4.Exit
-Enter your choice3
-Your element 45 is successfully deleted
-ENTER
-1.Peek
-2.Push
-3.Pop
-4.Exit
-Enter your choice1
-Enter at the top of the stack is 25
-ENTER
-1.Peek
-2.Push
-3.Pop
-4.Exit
-Enter your choice4*\
-
-
+/*...struct feedback
+{
+char Url[30],Username[30],Passw[20],Sugg[100];
+};
+void q1()                   //call q1 function....Question 1
+{
+printf("\nApproach and Efforts taken to clearly explain the topics");
+}
+void q2()                  //call q2 function....Question 2
+{
+printf("\nTimely conduction of Lectures and Practicals & checking of Assignments and journals");
+}
+void q3()                  //call q3 function....Question 3
+{
+printf("\nAudibility of Teacher");
+}
+void q4()                 //call q4 function...Question 4
+{
+printf("\nGestures and Class control");
+}
+void q5()                //call q5 function....Question 5
+{
+printf("\nKnowledge gained in college is making you ready for the Examination");
+}
+void q6()               //call q6 function....Question 6
+{
+printf("\nUse of Innovative ideas/methods in teaching.Effectiveness of the same for this subject"); 
+}
+void opt()
+{
+int option;
+printf("Enter your choice: ");
+printf("1.Need Improvement\n 2.Average\n 3.Good\n 4.Very Good\n 5.Excellent");
+scanf("%d",&option);
+switch(option)
+{
+case 1: printf("Need Improvement");
+break;
+case 2:printf("Average");
+break;
+case 3:printf("Good");
+break;
+case 4:printf("Very Good");
+break;
+case 5:printf("Excellent");
+break;
+}
+}
