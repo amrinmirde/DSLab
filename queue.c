@@ -96,118 +96,128 @@ void deletequeue()
 		}while(1);
 		return 0;
 	}
-/* int main()
+/*
+import java.util.*;
+class Feedback
 {
-struct feedback f;
+public static void main(String []args)
+{
+Scanner sc=new Scanner();
 int br,sem,cour,g,op;
 char c1[15],c2[15],c3[15],c4[15],c5[15];
-printf("\nEnter the URL:  ");
-scanf("%s",f.Url);
-printf("\nEnter Username:  ");
-scanf("%s",f.Username);
-printf("\nEnter Password:  ");
+char url[30],usern[30],tprof[30],pprof[30]
+System.out.println("\nEnter the URL:  ");
+url=sc.nextLine();
+System.out.println("\nEnter Username:  ");
+usern=sc.nextLine();
+System.out.println("\nEnter Password:  ");
 scanf("%s",f.Passw);
-printf("\n\n\nLogin");
-printf("\n\n\n\n\n\n\n\n\n\n\n\nSelect your Branch");
-printf("1. HAS\n2. CO\n3. ME\n4. EE\n5. ET"):
-scanf("%d",&br);
+System.out.println("\n\n\nLogin");
+System.out.println("\n\n\n\n\n\n\n\n\n\n\n\nSelect your Branch");
+System.out.println("1. HAS\n2. CO\n3. ME\n4. EE\n5. ET"):
+br=sc.nextInt();
 switch(br)
 {
-case 1: printf("HAS");
+case 1: System.out.println("HAS");
 break;
-case 2: printf("CO");
+case 2: System.out.println("CO");
 break;
-case 3:printf("ME");
+case 3:System.out.println("ME");
 break;
-case 4:printf("EE");
+case 4:System.out.println("EE");
 break;
-case 5:printf("ET");
+case 5:System.out.println("ET");
 break;
 }
-printf("\nEnter your semester: ");
-scanf("%d",&sem);
+System.out.println("\nEnter your semester: ");
+sem=sc.nextInt();
 do
 {
-printf("1. Course 1\n 2. Course 2\n 3.Course 3\n 4.Course 4\n 5. Course 5\n 6.Exit");
-scanf("%d",&cour);
+System.out.println("1. Course 1\n 2. Course 2\n 3.Course 3\n 4.Course 4\n 5. Course 5\n 6.Exit");
+cour=sc.nextInt();
 switch(cour)
 {
-case 1:printf("Course 1");
-scanf("%s",c1);
+case 1:System.out.println("\nEnter COURSE NAME");
+System.out.println("Course 1");
+System.out.println("\nEnter COURSE NAME");
+c1=sc.next();
 break;
-case 2:printf("Course 2");
-scanf("%s",c2);
+case 2:System.out.println("\nEnter COURSE NAME");
+System.out.println("Course 2");
+c2=sc.next();
 break;
-case 3:printf("Course 3");
-scanf("%s",c3);
+case 3:System.out.println("\nEnter COURSE NAME");
+System.out.println("Course 3");
+c3=sc.next();
 break;
-case 4:printf("Course 4");
-scanf("%s",c4);
+case :System.out.println("\nEnter COURSE NAME");
+System.out.println("Course 4");
+c4=sc.next();
 break;
-case 5:printf("Course 5");
-scanf("%s",c5);
+case 5:System.out.println("\nEnter COURSE NAME");
+System.out.println("Course 5");
+c5=sc.next();
 break;
-case 6:printf("Course 6");
-scanf("%s",c6);
+case 6:System.out.println("\nEnter COURSE NAME");
+System.out.println("Course 6");
+c6=sc.next();
 break;
-case 7:printf("Exit");
+case 7:System.out.println("\nEnter COURSE NAME");
+System.out.println("Exit");
 break;
 }
 do
 {
-printf("1.Theory\n 2. Practicals\n 3.Exit");
-scanf("%d",&g);
+System.out.println("1.Theory\n 2. Practicals\n 3.Exit");
+g=sc.nextInt();
 switch(g)
 {
-case 1:printf("Theory");
-printf("\nEnter Professor's Name: ");
-scanf("%s",tprof);
+case 1:System.out.println("**Theory**");
+System.out.println("\nEnter Professor's Name: ");
+tprof=sc.nextLine();
+Questions r=new Questions();
+r.q1();
+opt();
+r.q2();
+opt();
+r.q3();
+opt();
+r.q4();
+opt();
+r.q5();
+opt();
+r.q6();
+opt();
 break;
-q1();
+case 2:System.out.println("Practicals");
+System.out.println("\nEnter Professor's Name: ");
+pprof=sc.nextLine();										
+r.q1();
 opt();
-q2();
+r.q2();
 opt();
-q3();
+r.q3();
 opt();
-q4();
+r.q4();
 opt();
-q5();
+r.q5();
 opt();
-q6();
+r.q6();
 opt();
-
-case 2:printf("Practicals");
-printf("\nEnter Professor's Name: ");
-scanf("%s",pprof);			
-break;							
-q1();
-opt();
-q2();
-opt();
-q3();
-opt();
-q4();
-opt();
-q5();
-opt();
-q6();
-opt();			
-case 3:exit(0);         //call exit function or return 0
 break;
 }
-printf("\nEnter your suggestions for improvement");
-scanf("%s",sugg);
-printf("1.Submit answers\n 2.Cancel");
-scanf("%d",&op);
+System.out.println("\nEnter your suggestions for improvement");
+sugg=sc.nextLine();
+System.out.println("1.Submit answers\n 2.Cancel");
+op=sc.nextInt();
 switch(op)
 {
-case 2:printf("Submit answers");
+case 2:System.out.println("Submit answers");
 break;
-case 1:printf("Cancel");
+case 1:System.out.println("Cancel");
 break;
 }
 }while(op!=2);
-printf("\nYour answers have been saved");
+System.out.println("\nYour answers have been saved");
 }while(cour!=7);
-return 0;
 } */
