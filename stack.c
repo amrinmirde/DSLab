@@ -97,54 +97,54 @@ printf("Element cannot be deleted.Stack underflow");		//msg stack underflow
 }
               
 
-/*...struct feedback
+/*...
+class Questions extends Options
 {
-char Url[30];
-char Username[30];
-char Passw[20];
-char Sugg[100];
-};
 void q1()                   //call q1 function....Question 1
 {
-printf("\nApproach and Efforts taken to clearly explain the topics");
+System.out.println("\nApproach and Efforts taken to clearly explain the topics");
 }
 void q2()                  //call q2 function....Question 2
 {
-printf("\nTimely conduction of Lectures and Practicals & checking of Assignments and journals");
+System.out.println("\nTimely conduction of Lectures and Practicals & checking of Assignments and journals");
 }
 void q3()                  //call q3 function....Question 3
 {
-printf("\nAudibility of Teacher");
+System.out.println("\nAudibility of Teacher");
 }
 void q4()                 //call q4 function...Question 4
 {
-printf("\nGestures and Class control");
+System.out.println("\nGestures and Class control");
 }
 void q5()                //call q5 function....Question 5
 {
-printf("\nKnowledge gained in college is making you ready for the Examination");
+System.out.println("\nKnowledge gained in college is making you ready for the Examination");
 }
 void q6()               //call q6 function....Question 6
 {
-printf("\nUse of Innovative ideas/methods in teaching.Effectiveness of the same for this subject"); 
+System.out.println("\nUse of Innovative ideas/methods in teaching.Effectiveness of the same for this subject"); 
 }
-void opt()
+}
+class Options
+{
+static void opt()
 {
 int option;
-printf("Enter your choice: ");
-printf("1.Need Improvement\n 2.Average\n 3.Good\n 4.Very Good\n 5.Excellent");
-scanf("%d",&option);
+System.out.println("Enter your choice: ");
+System.out.println("1.Need Improvement\n 2.Average\n 3.Good\n 4.Very Good\n 5.Excellent");
+option=sc.nextInt();
 switch(option)
 {
-case 1: printf("Need Improvement");
+case 1: System.out.println("Need Improvement");
 break;
-case 2:printf("Average");
+case 2:System.out.println("Average");
 break;
-case 3:printf("Good");
+case 3:System.out.println("Good");
 break;
-case 4:printf("Very Good");
+case 4:System.out.println("Very Good");
 break;
-case 5:printf("Excellent");
+case 5:System.out.println("Excellent");
 break;
 }
 }
+}*/
